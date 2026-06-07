@@ -18,6 +18,10 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
 
 ENTRYPOINT ["java", \
+            "-XX:+UnlockExperimentalVMOptions", \
+            "-XX:+UseCGroupMemoryLimitForHeap", \
             "-XX:MaxRAMPercentage=60.0", \
+            "-XX:+PrintFlagsFinal", \
+            "-XshowSettings:vm", \
             "-jar", \
             "app.jar"]
