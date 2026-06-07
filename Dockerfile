@@ -17,6 +17,6 @@ EXPOSE 8080
 
 ENTRYPOINT ["java", \
             "-XX:MaxRAMPercentage=60.0", \
-            "-XX:+UseContainerSupport",
+            "-XX:+UseContainerSupport", \
             "-jar", \
             "app.jar"]
