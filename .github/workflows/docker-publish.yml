@@ -19,7 +19,7 @@ jobs:
 
       - name: Check Secret
         run: |
-            if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
+            if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ]; then
             echo "Secret missing"
             exit 1
             fi
