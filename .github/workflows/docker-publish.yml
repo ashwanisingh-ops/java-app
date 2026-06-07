@@ -17,6 +17,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check Secret
+        run: |
+            if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
+            echo "Secret missing"
+            exit 1
+            fi
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v4.2.0
         with:
