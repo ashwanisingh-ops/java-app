@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ashwanisingh007/java-app:d42625c749145d85a31cde559552a86110d55618
+        image: ashwanisingh007/java-app:f501b74eb9cc58a7ba59ac5e402ad3ad43bba577
         ports:
         - containerPort: 8080
         resources:
