@@ -16,8 +16,7 @@ COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java", \
-            "-XX:+UnlockExperimentalVMOptions", \
-            "-XX:+UseCGroupMemoryLimitForHeap", \
             "-XX:MaxRAMPercentage=60.0", \
+            "-XX:+UseContainerSupport",
             "-jar", \
             "app.jar"]
